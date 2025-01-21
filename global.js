@@ -1,6 +1,6 @@
 console.log("IT'S ALIVE!");
 
-function $$(selector, context = document){
+function $$(selector, context = document) {
     return Array.from(context.querySelectorAll(selector))
 }
 
@@ -13,11 +13,11 @@ function $$(selector, context = document){
 // currentLink?.classList.add('current')
 
 let pages = [
-    {url: '/portfolio/index.html', title: 'Home'},
-    {url: '/portfolio/projects/index.html', title: 'Projects'},
-    {url: '/portfolio/contact/index.html', title: 'Contact'},
-    {url: '/portfolio/resume/index.html', title: 'Resume'},
-    {url: 'https://github.com/adityakakarla', title: 'Github'}
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'portfolio/', title: 'Resume' },
+    { url: 'https://github.com/adityakakarla', title: 'Github' }
 ]
 
 let nav = document.createElement('nav')
@@ -25,20 +25,20 @@ document.body.prepend(nav)
 
 const ARE_WE_HOME = document.documentElement.classList.contains('home')
 
-for (let p of pages){
+for (let p of pages) {
     let url = p.url
-    // if (!ARE_WE_HOME && !url.startsWith('http')){
-    //     const repoName = location.pathname.split('/')[1];
-    //     url = `/${repoName}/${url}`
-    // }
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+
     let title = p.title
+
     let a = document.createElement('a')
     a.href = url
     a.textContent = title
-    if (a.host === location.host && a.pathname === location.pathname){
-        a.classList.add('current')
-    }
-    if (a.host !== location.host){
+    a.classList.toggle(
+        'current',
+        a.host === location.host && a.pathname === location.pathname
+    );
+    if (a.host !== location.host) {
         a.target = "_blank"
     }
     nav.append(a)
@@ -55,16 +55,16 @@ document.body.insertAdjacentHTML(
               <option value="light dark">Automatic</option>
           </select>
       </label>`
-  );
+);
 
 let themeSelect = $$("label.color-scheme select")[0]
 
-if("colorScheme" in localStorage){
+if ("colorScheme" in localStorage) {
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
     themeSelect.value = localStorage.colorScheme
 }
 
-themeSelect.addEventListener('input', function(event){
+themeSelect.addEventListener('input', function (event) {
     console.log('color scheme changed to', event.target.value)
     document.documentElement.style.setProperty('color-scheme', event.target.value);
     localStorage.colorScheme = event.target.value
@@ -72,13 +72,13 @@ themeSelect.addEventListener('input', function(event){
 
 let contactForm = $$("form.contact-form")[0]
 
-contactForm?.addEventListener('submit', function(event){
+contactForm?.addEventListener('submit', function (event) {
     event.preventDefault()
     let url = contactForm.action + '?'
     let data = new FormData(contactForm)
     let i = 0
-    for (let [name, value] of data){
-        if (i !== 0){
+    for (let [name, value] of data) {
+        if (i !== 0) {
             url += '&'
         }
         url += `${name}=${value}`
