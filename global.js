@@ -26,7 +26,12 @@ document.body.prepend(nav)
 const ARE_WE_HOME = document.documentElement.classList.contains('home')
 
 for (let p of pages){
-    let url = '/portfolio' + p.url
+    // let url = p.url
+    // if (!ARE_WE_HOME && !url.startsWith('http')){
+    //     url = '/portfolio/' + url
+    // }
+
+    let url = '/portfolio/' + url
     let title = p.title
     let a = document.createElement('a')
     a.href = url
