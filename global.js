@@ -31,7 +31,7 @@ for (let p of pages){
     //     url = '/portfolio/' + url
     // }
 
-    let url = '/portfolio/' + url
+    let url = '/portfolio/' + p.url
     let title = p.title
     let a = document.createElement('a')
     a.href = url
