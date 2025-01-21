@@ -13,10 +13,10 @@ function $$(selector, context = document){
 // currentLink?.classList.add('current')
 
 let pages = [
-    {url: 'index.html', title: 'Home'},
-    {url: 'projects/index.html', title: 'Projects'},
-    {url: 'contact/index.html', title: 'Contact'},
-    {url: 'resume/index.html', title: 'Resume'},
+    {url: '/portfolio/index.html', title: 'Home'},
+    {url: '/portfolio/projects/index.html', title: 'Projects'},
+    {url: '/portfolio/contact/index.html', title: 'Contact'},
+    {url: '/portfolio/resume/index.html', title: 'Resume'},
     {url: 'https://github.com/adityakakarla', title: 'Github'}
 ]
 
@@ -27,9 +27,10 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home')
 
 for (let p of pages){
     let url = p.url
-    if (!ARE_WE_HOME && !url.startsWith('http')){
-        url = '../' + url
-    }
+    // if (!ARE_WE_HOME && !url.startsWith('http')){
+    //     const repoName = location.pathname.split('/')[1];
+    //     url = `/${repoName}/${url}`
+    // }
     let title = p.title
     let a = document.createElement('a')
     a.href = url
