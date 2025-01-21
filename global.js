@@ -28,7 +28,7 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home')
 for (let p of pages){
     let url = p.url
     if (!ARE_WE_HOME && !url.startsWith('http')){
-        url = '/portfolio/' + url
+        url = '../' + url
     }
     let title = p.title
     let a = document.createElement('a')
