@@ -13,10 +13,10 @@ function $$(selector, context = document) {
 // currentLink?.classList.add('current')
 
 let pages = [
-    { url: 'portfolio/', title: 'Home' },
-    { url: 'portfolio/projects/', title: 'Projects' },
-    { url: 'portfolio/contact/', title: 'Contact' },
-    { url: 'portfolio/portfolio/', title: 'Resume' },
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'portfolio/', title: 'Resume' },
     { url: 'https://github.com/adityakakarla', title: 'Github' }
 ]
 
@@ -27,7 +27,7 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home')
 
 for (let p of pages) {
     let url = p.url
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    url = !ARE_WE_HOME && !url.startsWith('http') ? '/portfolio/' + url : url;
 
     let title = p.title
 
