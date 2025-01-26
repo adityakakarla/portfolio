@@ -68,6 +68,7 @@ label {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
+  margin: 1em;
 }
 
 .projects article {
@@ -79,6 +80,35 @@ label {
 .projects article h2 {
   margin: 0;
 }
+
+#profile-stats {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+#profile-stats dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+#profile-stats dt {
+  font-weight: bold;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+#profile-stats dd {
+  width: 50%;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
 
 h1 {
   font-size: 3rem;
@@ -119,4 +149,27 @@ label.color-scheme {
 
 label.color-scheme select{
   margin-left: 10px;
+}
+
+
+.profile-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px; /* Square with slight rounded corners */
+  border: 2px solid var(--color-accent);
+}
+
+.projects-section h2, .stats-section h2 {
+  border-bottom: none; /* Remove underlines */
+  position: relative;
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
 }

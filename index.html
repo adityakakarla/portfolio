@@ -6,11 +6,27 @@
     <title>Aditya Kakarla: Personal site and portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="global.js"></script>
+    <script src="index.js" type="module" defer></script>
 </head>
 <body>
-    <h1>Aditya Kakarla</h1>
-    <p>I am a data science student at UC San Diego with experience building AI apps.
-I have worked at multiple organizations, from government agencies to research labs. My primary focus has been developing AI infrastructure.</p>
-    <img src = 'images/profile_photo.JPG' alt="A picture of Aditya Kakarla (me)">
+    <div class="container">
+        <header>
+            <h1>Aditya Kakarla</h1>
+            <div class="profile-intro">
+                <img src='images/profile_photo.JPG' alt="A picture of Aditya Kakarla (me)" class="profile-image">
+                <p>I am a data science student at UC San Diego with experience building AI apps. I have worked at multiple organizations, from government agencies to research labs. My primary focus has been developing AI infrastructure.</p>
+            </div>
+        </header>
+
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects"></div>
+        </section>
+
+        <section class="stats-section">
+            <h2>GitHub Profile</h2>
+            <div id="profile-stats"></div>
+        </section>
+    </div>
 </body>
 </html>

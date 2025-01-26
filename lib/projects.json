@@ -1,0 +1,74 @@
+[
+	{
+		"title": "Krait",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A CLI tool built in Go to generate other CLI tools using generative AI"
+	},
+	{
+		"title": "FedLevels",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A SvelteKit + Supabase salary website for government contractors"
+	},
+	{
+		"title": "api.adityakakarla.com",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A personal API built in Go and deployed with Docker + GCP"
+	},
+	{
+		"title": "Sopabase",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A defense copilot to accelerate decisions using geospatial analysis"
+	},
+	{
+		"title": "CallToChange",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A Python library + Next.js web app to log LLM emissions"
+	},
+	{
+		"title": "ucsdGPT",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2024",
+		"description": "A Next.js + OpenAI app to generate course recommendations for UCSD students"
+	},
+	{
+		"title": "Focus Tracker",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "A finetuned YOLOv5 model that punishes users when they doomscroll"
+	},
+	{
+		"title": "F1 Alexa",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "An Alexa skill that announces the next upcoming F1 race"
+	},
+	{
+		"title": "Pic-to-Plate",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "Using OpenAI + CV to generate recipes and calculate nutrition data from images"
+	},
+	{
+		"title": "Anti-Podal Calculator",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "Find where you'd end up if you dug straight down."
+	},
+	{
+		"title": "Touch Grass",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "Using the Unsplash API to help people touch grass"
+	},
+	{
+		"title": "Adityacoin",
+		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
+		"year": "2023",
+		"description": "Made an Ethereum-tied crypto token for fun on the weekend."
+	}
+]
