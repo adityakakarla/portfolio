@@ -173,3 +173,58 @@ label.color-scheme select{
   padding-bottom: 0.3rem;
   padding-top: 0.3rem;
 }
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.legend .swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: var(--color);
+}
+
+.legend em {
+  font-style: normal;
+  margin-left: -0.2rem;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
