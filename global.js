@@ -17,7 +17,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
-    { url: 'meta/', title: 'Meta'},
+    { url: 'meta/', title: 'Meta' },
     { url: 'https://github.com/adityakakarla', title: 'Github' }
 ]
 
@@ -105,10 +105,22 @@ export async function fetchJSON(url) {
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
     containerElement.innerHTML = ''
-    for (let i = 0; i < projects.length; i++){
+    for (let i = 0; i < projects.length; i++) {
         let project = projects[i]
         const article = document.createElement('article')
-        article.innerHTML = `
+        if ('url' in project) {
+            console.log(project.title)
+            article.innerHTML = `
+        <a href=${project.url}><${headingLevel}>${project.title}</${headingLevel}></a>
+        <img src="${project.image}" alt="${project.title}">
+        <div>
+        <p>${project.description}</p>
+        <p>${project.year}</p>
+        </div>
+    `;
+        } else {
+
+            article.innerHTML = `
         <${headingLevel}>${project.title}</${headingLevel}>
         <img src="${project.image}" alt="${project.title}">
         <div>
@@ -116,10 +128,11 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
         <p>${project.year}</p>
         </div>
     `;
+        }
         containerElement.appendChild(article);
     }
 }
 
-export async function fetchGithubData(username){
+export async function fetchGithubData(username) {
     return fetchJSON(`https://api.github.com/users/${username}`)
 }

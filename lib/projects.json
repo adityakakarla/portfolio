@@ -1,5 +1,12 @@
 [
 	{
+"title": "Bikewatching",
+"url": "",
+"image": "../lib/bikewatching.png",
+"year": "2025",
+"description": "A visualization tool to track Bostonian bike usage trends."
+	},
+	{
 		"title": "Krait",
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"year": "2024",
